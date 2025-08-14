@@ -509,6 +509,7 @@ section h4 {
 
 /* ABOUT CONTAINER */
 .about-container {
+  overflow-x: hidden;
   display: flex;
   align-items: flex-start;
   gap: 2rem;
