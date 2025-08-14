@@ -936,7 +936,8 @@ body.light-mode #sendGmailButton:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  
   main {
     width: 100%;
     padding: 0 0.5rem;
@@ -1008,6 +1009,10 @@ body.light-mode #sendGmailButton:hover {
 }
 
 @media (max-width: 768px) {
+  .abouth1 {
+  width: 70%;
+  line-height: 1.5;
+}
   header {
     position: sticky;
     top: 0;
@@ -1105,6 +1110,10 @@ body.light-mode #sendGmailButton:hover {
 }
 
 @media (max-width: 480px) {
+  .abouth1 {
+  width: 70%;
+  line-height: 1.5;
+}
   header {
     padding: 0.5rem 1rem;
   }
@@ -1150,6 +1159,10 @@ body.light-mode #sendGmailButton:hover {
 }
 
 @media (max-width: 300px) {
+  .abouth1 {
+  width: 70%;
+  line-height: 1.5;
+}
   header {
     padding: 0.3rem;
   }
