@@ -164,6 +164,10 @@ body.light-mode .project-card {
   box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 30px;
+    max-width: 100%;
+  word-wrap: break-word;        /* Browser lama */
+  overflow-wrap: break-word;    /* Browser modern */
+  white-space: normal;  
 }
 
 body.light-mode .card:hover,
@@ -684,6 +688,10 @@ section h4 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
+    max-width: 100%;
+  word-wrap: break-word;        /* Browser lama */
+  overflow-wrap: break-word;    /* Browser modern */
+  white-space: normal;  
 }
 
 .experience-card h3 {
