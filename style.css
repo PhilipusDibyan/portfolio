@@ -154,6 +154,10 @@ body.light-mode nav ul li {
   align-items: center;
 }
 
+body.light-mode nav ul li a:hover {
+  color: var(--success-color);
+}
+
 /* Modern card styling */
 body.light-mode .card,
 body.light-mode .skill-card,
