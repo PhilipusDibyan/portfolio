@@ -1127,6 +1127,9 @@ body.light-mode #sendGmailButton:hover {
   main {
     padding: 0 3rem;
   }
+  section h4 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 580px) {
   .abouth1 {
