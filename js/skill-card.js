@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   skillCards.forEach((el, index) => {
-    el.style.transitionDelay = `${index * 0.2}s`; // delay tiap elemen
+    el.style.transitionDelay = `${index * 0.1}s`; // delay tiap elemen
     observer.observe(el);
   });
 });

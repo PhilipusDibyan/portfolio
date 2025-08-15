@@ -125,13 +125,13 @@ body.light-mode {
 
 /* Modern header styling in light mode */
 body.light-mode header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  background: var(--bg-color);
-
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
 }
 
 body.light-mode main h4{
@@ -290,10 +290,13 @@ header {
   align-items: center;
   padding: 1rem 3rem;
   background: var(--bg-color);
+  z-index: 999;
+  position: fixed;
   top: 0;
-  position: sticky;
-  z-index: 1000;
-  transition: transform 0.3s ease;
+  left: 0;
+  width: 100%;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
 }
 
 #theme-toggle {
@@ -315,6 +318,7 @@ header {
 
 header.hide {
   transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
 
 /* MENU ICON */
@@ -998,6 +1002,10 @@ body.light-mode #sendGmailButton:hover {
 @media (max-width: 1024px) {
   header {
     padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
   nav ul {
     gap: 2rem;
@@ -1018,15 +1026,22 @@ body.light-mode #sendGmailButton:hover {
 
 @media (max-width: 768px) {
   .abouth1 {
-  width: 70%;
+  width: 100%;
   line-height: 1.5;
+  font-weight: bolder;
 }
   header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;    
     z-index: 1000;
     background: var(--bg-color);
     padding: 1rem 1.5rem;
+  }
+
+  main{
+    padding: 0 3rem;
   }
 
   #menu-icon {
@@ -1119,12 +1134,20 @@ body.light-mode #sendGmailButton:hover {
 
 @media (max-width: 480px) {
   .abouth1 {
-  width: 70%;
+  width: 100%;
   line-height: 1.5;
 }
   header {
     padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
+  main{
+    padding: 0 2rem;
+  }
+  
   .mainIcon {
     width: 70px;
     height: 70px;
@@ -1173,6 +1196,12 @@ body.light-mode #sendGmailButton:hover {
 }
   header {
     padding: 0.3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  main{
+    padding: 0 1rem;
   }
   .mainIcon {
     width: 50px;
