@@ -144,7 +144,7 @@ body.light-mode nav ul {
   display: flex;
   gap: 3rem;
   list-style: none;
-  align-items: center; /* ini penting agar semua anak (li) rata tengah vertikal */
+  align-items: center; 
   padding: 0;
   margin: 0;
 }
@@ -164,7 +164,7 @@ body.light-mode .project-card {
   box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 30px;
-    max-width: 100%;
+  max-width: 100%;
   word-wrap: break-word;        /* Browser lama */
   overflow-wrap: break-word;    /* Browser modern */
   white-space: normal;  
@@ -177,6 +177,13 @@ body.light-mode .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+body.light-mode .experience-card ul li {
+  content: "✔ ";
+  color: var(--gray-900);
+  font-weight: 600;
+}
+
 
 /* Modern button styling */
 body.light-mode .cv-button {
@@ -244,7 +251,7 @@ body:not(.light-mode) #theme-icon.fa-sun {
 
 /* Smooth transitions */
 * {
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 
@@ -511,7 +518,7 @@ section h4 {
   font-family: var(--font-header);
   color: #22f3fa;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.1;
 }
 
@@ -533,6 +540,7 @@ section h4 {
 }
 
 .about-photo {
+  margin-top: 1rem;
   flex: 1 1 35%;
   display: flex;
   justify-content: center;
@@ -673,7 +681,7 @@ section h4 {
   max-width: 1100px;
   padding: 4rem 0;
   margin-top: 10rem;
-
+  
 }
 
 .experience-grid {
@@ -684,18 +692,19 @@ section h4 {
 }
 
 .experience-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(0, 189, 196, 0.3);
-  padding: 20px;
-  border-radius: 15px;
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
-    max-width: 100%;
+  background-color: var(--second-bg-color);
+  border: 0 solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
+  border-radius: 30px;
+  max-width: 100%;
   word-wrap: break-word;        /* Browser lama */
   overflow-wrap: break-word;    /* Browser modern */
-  white-space: normal;  
+  white-space: normal;
+  padding: 20px;
+  min-height: 350px;
+  transform: translateY(1) scale(1);
+  transition: transform .3s ease;
+
 }
 
 .experience-card h3 {
@@ -707,12 +716,9 @@ section h4 {
 .experience-card .period {
   font-size: 0.9rem;
   color: #a8b2d1;
-  margin-bottom: 10px;
-  display: block;
 }
 
 .experience-card p {
-  margin-bottom: 10px;
   color: #cfd8dc;
 }
 
@@ -731,12 +737,8 @@ section h4 {
   box-shadow: 0 8px 20px rgba(0, 189, 196, 0.4);
 }
 
-/* Animasi Fade-in saat Scroll */
-.experience-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
+/* Animasi Fade-in saat Scroll */
 .projects-section {
   max-width: 1100px;
   padding: 0 1rem;
@@ -750,6 +752,9 @@ section h4 {
 }
 
 .project-card {
+  display: flex;               
+  flex-direction: column;      
+  justify-content: space-between;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -757,7 +762,7 @@ section h4 {
   background-size: cover;
   background-position: center;
   margin-top: 3rem;
-  border-radius: 12px;
+  border-radius: 30px;
   min-height: 300px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -779,13 +784,14 @@ section h4 {
 
 .project-card h3 {
   color: #22f3fa;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
 .project-card p {
   font-size: 0.9rem;
   margin-bottom: 10px;
   color: #e3e9ec;
+  flex-grow: 1;
 }
 
 .project-link {
@@ -796,6 +802,7 @@ section h4 {
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.3s, transform 0.2s;
+  margin-top: auto;
 }
 
 .project-link:hover {
@@ -962,11 +969,17 @@ body.light-mode #sendGmailButton:hover {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 12px;
   }
+  .project-card {
+    display: flex;               
+    flex-direction: column;      
+    justify-content: space-between;
+  }
+
   section {
     padding: 2rem 0;
   }
   .contact-section {
-    margin-top: 3rem;
+    margin-top: 30vh;
     padding: 0 0.2rem;
   }
   .contact-form {
@@ -981,15 +994,20 @@ body.light-mode #sendGmailButton:hover {
 
 @media (max-width: 400px) {
   .about-photo img {
-    max-width: 160px;
+    max-width: 230px;
   }
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 8px;
   }
+  .project-card {
+    display: flex;               
+    flex-direction: column;      
+    justify-content: space-between;
+  }
   .contact-section {
-    margin-top: 2rem;
+    margin-top: 30vh;
     padding: 0 0.1rem;
   }
   body.light-mode #sendGmailButton {
@@ -1051,13 +1069,13 @@ body.light-mode #sendGmailButton:hover {
   nav ul {
     position: fixed;
     top: 0;
-    right: -65%;
+    right: -75%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgba(7, 49, 47, 0.96);
-    width: 65%;
-    height: 100%;
+    width: 75%;
+    height: 100vh;
     gap: 3rem;
     box-shadow: -3px 0 10px rgba(0, 41, 3, 0.3);
     transition: right 0.6s ease;
@@ -1104,23 +1122,28 @@ body.light-mode #sendGmailButton:hover {
     font-size: 1.6rem;
   }
 
-  .about-text,
+
   .experience-section p,
   .contact-section p {
     font-size: 1rem;
     padding: 0 1rem;
   }
 
+  .about-text {
+    font-size: 1rem;
+    padding: 5 1rem;
+  }
+
   body.light-mode nav ul {
     position: fixed;
     top: 0;
-    right: -65%;
+    right: -75%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: rgba(255,255,255,0.96); /* light mode background */
-    width: 65%;
-    height: 100%;
+    width: 75%;
+    height: 100vh;
     gap: 3rem;
     box-shadow: -3px 0 10px rgba(0, 41, 3, 0.08);
     transition: right 0.6s ease;
@@ -1172,12 +1195,12 @@ body.light-mode #sendGmailButton:hover {
   .experience-section p,
   .contact-section p {
     font-size: 0.9rem;
-    padding: 0 0.5rem;
+    padding: 5rem 0.5rem;
   }
   nav ul {
     right: -75%;
     width: 75%;
-    gap: 2rem;
+    gap: 3rem;
   }
   .typing-text {
     font-size: 1.1rem;
