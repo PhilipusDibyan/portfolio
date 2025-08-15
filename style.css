@@ -995,7 +995,7 @@ body.light-mode #sendGmailButton:hover {
   }
 
   main{
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
 
   #menu-icon {
@@ -1123,7 +1123,12 @@ body.light-mode #sendGmailButton:hover {
     padding: 10px 0;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  main {
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 580px) {
   .abouth1 {
   width: 100%;
   line-height: 1.5;
@@ -1136,7 +1141,7 @@ body.light-mode #sendGmailButton:hover {
     width: 100%;
   }
   main{
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
   
   .mainIcon {
