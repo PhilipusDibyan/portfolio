@@ -919,6 +919,30 @@ body.light-mode #sendGmailButton:hover {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  nav ul {
+    gap: 2rem;
+  }
+  .typing-text {
+    font-size: 1.8rem;
+  }
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 65%; }
+  }
+    .about-container h4,
+  .experience-section h4,
+  .contact-section h4 {
+    font-size: 1.8rem;
+  }
+}
 @media (max-width: 900px) {
   main {
     width: 95%;
@@ -954,94 +978,6 @@ body.light-mode #sendGmailButton:hover {
     padding: 0 0.5rem;
   }
 }
-
-@media (max-width: 768px) {
-  
-  main {
-    width: 100%;
-    padding: 0 0.5rem;
-  }
-  .about-text h4, .skills-section h4{
-    text-align: center;
-  }
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-  }
-  .project-card {
-    display: flex;               
-    flex-direction: column;      
-    justify-content: space-between;
-  }
-
-  section {
-    padding: 2rem 0;
-  }
-  .contact-section {
-    margin-top: 30vh;
-    padding: 0 0.2rem;
-  }
-  .contact-form {
-    max-width: 100%;
-  }
-  body.light-mode #sendGmailButton {
-    max-width: 100%;
-    font-size: 0.95rem;
-    padding: 10px 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .about-photo img {
-    max-width: 230px;
-  }
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 8px;
-  }
-  .project-card {
-    display: flex;               
-    flex-direction: column;      
-    justify-content: space-between;
-  }
-  .contact-section {
-    margin-top: 30vh;
-    padding: 0 0.1rem;
-  }
-  body.light-mode #sendGmailButton {
-    font-size: 0.9rem;
-    padding: 8px 0;
-  }
-}
-
-/* BREAKPOINT HEADER */
-@media (max-width: 1024px) {
-  header {
-    padding: 1rem 3rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  nav ul {
-    gap: 2rem;
-  }
-  .typing-text {
-    font-size: 1.8rem;
-  }
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 65%; }
-  }
-    .about-container h4,
-  .experience-section h4,
-  .contact-section h4 {
-    font-size: 1.8rem;
-  }
-}
-
 @media (max-width: 768px) {
   .abouth1 {
   width: 100%;
@@ -1153,8 +1089,40 @@ body.light-mode #sendGmailButton:hover {
     right: 0;
   }
 
-}
+    main {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  .about-text h4, .skills-section h4{
+    text-align: center;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .project-card {
+    display: flex;               
+    flex-direction: column;      
+    justify-content: space-between;
+  }
 
+  section {
+    padding: 2rem 0;
+  }
+  .contact-section {
+    margin-top: 30vh;
+    padding: 0 0.2rem;
+  }
+  .contact-form {
+    max-width: 100%;
+  }
+  body.light-mode #sendGmailButton {
+    max-width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+}
 @media (max-width: 480px) {
   .abouth1 {
   width: 100%;
@@ -1211,7 +1179,29 @@ body.light-mode #sendGmailButton:hover {
   }
 
 }
-
+@media (max-width: 400px) {
+  .about-photo img {
+    max-width: 230px;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+  }
+  .project-card {
+    display: flex;               
+    flex-direction: column;      
+    justify-content: space-between;
+  }
+  .contact-section {
+    margin-top: 30vh;
+    padding: 0 0.1rem;
+  }
+  body.light-mode #sendGmailButton {
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+}
 @media (max-width: 300px) {
   .abouth1 {
   width: 70%;
