@@ -1114,7 +1114,7 @@ body.light-mode #sendGmailButton:hover {
   }
   @keyframes typing {
     from { width: 0; }
-    to { width: 60%; }
+    to { width: 65%; }
   }
   .about-container h4,
   .experience-section h4,
